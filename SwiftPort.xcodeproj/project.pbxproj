@@ -7,13 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B19F30B81BE2AB6C00388BD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B71BE2AB6C00388BD9 /* Result.framework */; };
+		B19F30BA1BE2AB7800388BD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */; };
+		B19F30BD1BE2AC5C00388BD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */; };
 		B1A06D6F1BE1B36200C712B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */; };
 		B1A06D711BE1B36200C712B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D701BE1B36200C712B1 /* ViewController.swift */; };
-		B1A06D741BE1B36200C712B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A06D721BE1B36200C712B1 /* Main.storyboard */; };
 		B1A06D771BE1B36200C712B1 /* SwiftPort.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D751BE1B36200C712B1 /* SwiftPort.xcdatamodeld */; };
 		B1A06D791BE1B36200C712B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A06D781BE1B36200C712B1 /* Assets.xcassets */; };
 		B1A06D7C1BE1B36200C712B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */; };
 		B1A06D871BE1B36200C712B1 /* SwiftPortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D861BE1B36200C712B1 /* SwiftPortTests.swift */; };
+		B1A06D931BE1B3A700C712B1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D921BE1B3A700C712B1 /* Validation.swift */; };
+		B1A06D941BE1BC1200C712B1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D921BE1B3A700C712B1 /* Validation.swift */; };
+		B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D961BE1C41A00C712B1 /* Networking.swift */; };
+		B1A747131BE4483D0084AC98 /* NetworkingUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */; };
+		B1ABA25C1BE317B200A60A7D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */; };
+		B1ABA25D1BE317B400A60A7D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B71BE2AB6C00388BD9 /* Result.framework */; };
+		B1B5D6901BE3C967007ED269 /* NetworkingVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */; };
+		B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
+		B1B5D6931BE3F01B007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
+		B1B5D6941BE3F03E007ED269 /* NetworkingVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */; };
+		B1B5D6981BE40F53007ED269 /* NetworkingUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */; };
+		B1B8556A1BE9814E0044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
+		B1B8556B1BE9C5250044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
+		B1C21A3F1BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */; };
+		B1C21A401BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */; };
+		B1C21A421BE963DE00A8C9D3 /* MixedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */; };
+		B1C21A431BE963DE00A8C9D3 /* MixedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */; };
+		B1D106CD1BE2699100C61C11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D106CC1BE2699100C61C11 /* Constants.swift */; };
+		B1D106CF1BE26C0100C61C11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D106CC1BE2699100C61C11 /* Constants.swift */; };
+		B1D106D01BE275B800C61C11 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D961BE1C41A00C712B1 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B16F99A51BE807FB009EC8D1 /* Zimcher.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Zimcher.playground; path = SwiftPort/Zimcher.playground; sourceTree = SOURCE_ROOT; };
+		B19F30B71BE2AB6C00388BD9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		B1A06D6B1BE1B36200C712B1 /* SwiftPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1A06D701BE1B36200C712B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B1A06D731BE1B36200C712B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1A06D761BE1B36200C712B1 /* SwiftPort.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftPort.xcdatamodel; sourceTree = "<group>"; };
 		B1A06D781BE1B36200C712B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1A06D7B1BE1B36200C712B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +63,15 @@
 		B1A06D821BE1B36200C712B1 /* SwiftPortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A06D861BE1B36200C712B1 /* SwiftPortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPortTests.swift; sourceTree = "<group>"; };
 		B1A06D881BE1B36200C712B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A06D921BE1B3A700C712B1 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		B1A06D961BE1C41A00C712B1 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingVideo.swift; sourceTree = "<group>"; };
+		B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveNetworking.swift; sourceTree = "<group>"; };
+		B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingUpload.swift; sourceTree = "<group>"; };
+		B1B855691BE9814E0044F616 /* MIME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIME.swift; sourceTree = "<group>"; };
+		B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
+		B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedStream.swift; sourceTree = "<group>"; };
+		B1D106CC1BE2699100C61C11 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19F30BA1BE2AB7800388BD9 /* ReactiveCocoa.framework in Frameworks */,
+				B19F30B81BE2AB6C00388BD9 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +88,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1ABA25C1BE317B200A60A7D /* ReactiveCocoa.framework in Frameworks */,
+				B1ABA25D1BE317B400A60A7D /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B16D368A1BEAB4B70093EFD3 /* Multipart/Form-Data */ = {
+			isa = PBXGroup;
+			children = (
+				B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */,
+			);
+			name = "Multipart/Form-Data";
+			sourceTree = "<group>";
+		};
 		B1A06D621BE1B36200C712B1 = {
 			isa = PBXGroup;
 			children = (
+				B16F99A51BE807FB009EC8D1 /* Zimcher.playground */,
 				B1A06D6D1BE1B36200C712B1 /* SwiftPort */,
 				B1A06D851BE1B36200C712B1 /* SwiftPortTests */,
 				B1A06D6C1BE1B36200C712B1 /* Products */,
+				B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */,
+				B19F30B71BE2AB6C00388BD9 /* Result.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +128,13 @@
 		B1A06D6D1BE1B36200C712B1 /* SwiftPort */ = {
 			isa = PBXGroup;
 			children = (
-				B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */,
+				B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */,
 				B1A06D701BE1B36200C712B1 /* ViewController.swift */,
-				B1A06D721BE1B36200C712B1 /* Main.storyboard */,
-				B1A06D781BE1B36200C712B1 /* Assets.xcassets */,
-				B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */,
-				B1A06D7D1BE1B36200C712B1 /* Info.plist */,
-				B1A06D751BE1B36200C712B1 /* SwiftPort.xcdatamodeld */,
+				B1D106CC1BE2699100C61C11 /* Constants.swift */,
+				B1A747141BE473560084AC98 /* Networking */,
+				B1A06D951BE1BE0800C712B1 /* Util */,
+				B1D106CE1BE26BA700C61C11 /* CoreData */,
+				B1A06D911BE1B38C00C712B1 /* Misc */,
 			);
 			path = SwiftPort;
 			sourceTree = "<group>";
@@ -99,6 +148,47 @@
 			path = SwiftPortTests;
 			sourceTree = "<group>";
 		};
+		B1A06D911BE1B38C00C712B1 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */,
+				B1A06D781BE1B36200C712B1 /* Assets.xcassets */,
+				B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */,
+				B1A06D7D1BE1B36200C712B1 /* Info.plist */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		B1A06D951BE1BE0800C712B1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B1B855691BE9814E0044F616 /* MIME.swift */,
+				B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */,
+				B1A06D921BE1B3A700C712B1 /* Validation.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		B1A747141BE473560084AC98 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B1A06D961BE1C41A00C712B1 /* Networking.swift */,
+				B16D368A1BEAB4B70093EFD3 /* Multipart/Form-Data */,
+				B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */,
+				B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */,
+				B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B1D106CE1BE26BA700C61C11 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B1A06D751BE1B36200C712B1 /* SwiftPort.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +199,7 @@
 				B1A06D671BE1B36200C712B1 /* Sources */,
 				B1A06D681BE1B36200C712B1 /* Frameworks */,
 				B1A06D691BE1B36200C712B1 /* Resources */,
+				B19F30BB1BE2ABDE00388BD9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -180,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19F30BD1BE2AC5C00388BD9 /* Main.storyboard in Resources */,
 				B1A06D7C1BE1B36200C712B1 /* LaunchScreen.storyboard in Resources */,
 				B1A06D791BE1B36200C712B1 /* Assets.xcassets in Resources */,
-				B1A06D741BE1B36200C712B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +286,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B19F30BB1BE2ABDE00388BD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1A06D671BE1B36200C712B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B8556A1BE9814E0044F616 /* MIME.swift in Sources */,
+				B1C21A3F1BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */,
 				B1A06D711BE1B36200C712B1 /* ViewController.swift in Sources */,
+				B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */,
 				B1A06D6F1BE1B36200C712B1 /* AppDelegate.swift in Sources */,
+				B1C21A421BE963DE00A8C9D3 /* MixedStream.swift in Sources */,
+				B1B5D6981BE40F53007ED269 /* NetworkingUpload.swift in Sources */,
+				B1D106CD1BE2699100C61C11 /* Constants.swift in Sources */,
+				B1B5D6901BE3C967007ED269 /* NetworkingVideo.swift in Sources */,
 				B1A06D771BE1B36200C712B1 /* SwiftPort.xcdatamodeld in Sources */,
+				B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */,
+				B1A06D931BE1B3A700C712B1 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B5D6931BE3F01B007ED269 /* ReactiveNetworking.swift in Sources */,
+				B1B5D6941BE3F03E007ED269 /* NetworkingVideo.swift in Sources */,
 				B1A06D871BE1B36200C712B1 /* SwiftPortTests.swift in Sources */,
+				B1A06D941BE1BC1200C712B1 /* Validation.swift in Sources */,
+				B1B8556B1BE9C5250044F616 /* MIME.swift in Sources */,
+				B1D106CF1BE26C0100C61C11 /* Constants.swift in Sources */,
+				B1C21A401BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */,
+				B1C21A431BE963DE00A8C9D3 /* MixedStream.swift in Sources */,
+				B1A747131BE4483D0084AC98 /* NetworkingUpload.swift in Sources */,
+				B1D106D01BE275B800C61C11 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B1A06D721BE1B36200C712B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1A06D731BE1B36200C712B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -329,6 +448,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftPort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kappa.SwiftPort;
@@ -340,6 +463,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftPort/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kappa.SwiftPort;
@@ -351,6 +478,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftPortTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kappa.SwiftPortTests;
@@ -363,6 +494,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftPortTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kappa.SwiftPortTests;
@@ -390,6 +525,7 @@
 				B1A06D8D1BE1B36200C712B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1A06D8E1BE1B36200C712B1 /* Build configuration list for PBXNativeTarget "SwiftPortTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +534,7 @@
 				B1A06D901BE1B36200C712B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
