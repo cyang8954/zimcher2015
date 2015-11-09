@@ -1,11 +1,3 @@
-//
-//  MultipartUpload.swift
-//  SwiftPort
-//
-//  Created by Weiyu Huang on 11/3/15.
-//  Copyright © 2015 Kappa. All rights reserved.
-//
-
 import Foundation
 
 extension Networking {
@@ -21,8 +13,8 @@ extension Networking {
     }   
 }
 
-// MARK: Input Datatypes For Multipart/Form-data
-protocol MultipartFormInputDataType
+// MARK: Input Datatypes For multipart/form-data
+protocol FormValueDataType
 {
     var size: UInt64 {get}
 }
@@ -39,7 +31,7 @@ protocol FileTypeData: MIMETypedData
 }
 
 // Doesn't have acutal data in it
-struct File: MultipartFormInputDataType, FileTypeData{
+struct File: FormValueDataType, FileTypeData{
     let unescapedName: String
     let size: UInt64
     let MIMEType: String
@@ -69,7 +61,7 @@ struct File: MultipartFormInputDataType, FileTypeData{
     }
 }
 
-extension String: MultipartFormInputDataType{
+extension String: FormValueDataType{
     var size: UInt64 {
         return UInt64(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
     }
@@ -89,13 +81,13 @@ struct Multipart {
         return s + Multipart.endingBoundary.size
     }
     
-    var bodyParts = [(fieldName: String, value: MultipartFormInputDataType)]()
+    var bodyParts = [(fieldName: String, value: FormValueDataType)]()
     
     var headers:[String: String] {
         return ["content-type": "multipart/form-data; boundary=\(Multipart.boundaryString)", "content-length": String(contentLength)]
     }
     
-    private func subHeaderForBodyPart(fieldName: String, bodypart: MultipartFormInputDataType) -> [String: String]
+    private func subHeaderForBodyPart(fieldName: String, bodypart: FormValueDataType) -> [String: String]
     {
         var subHeader = ["Content-Disposition": "form-data; name=\"\(fieldName)\""]
         if bodypart is MIMETypedData {
@@ -107,7 +99,7 @@ struct Multipart {
         return subHeader
     }
     
-    private func subHeaderData(pair: (String, MultipartFormInputDataType)) -> NSData
+    private func subHeaderData(pair: (String, FormValueDataType)) -> NSData
     {
         let s = Networking.headersToString(subHeaderForBodyPart(pair.0, bodypart: pair.1))
         return encodeString(s)
@@ -119,12 +111,8 @@ struct Multipart {
         //no workaround if failed?
     }
     
-    init(){
-        
-    }
-    
     //MARK: Output
-    // Smaller files using NSData. Time efficient
+    // Smaller files use NSData. Time efficient
     // Data is stateless
     var data: NSData {
         let output = bodyParts.reduce(NSMutableData()) { accu, newVal in
@@ -166,9 +154,18 @@ struct Multipart {
     }
     
     //MARK: Input
-    mutating func appendField(fieldName: String, value: MultipartFormInputDataType)
+    mutating func appendField(fieldName: String, value: FormValueDataType)
     {
         bodyParts.append((fieldName: fieldName , value: value))
+    }
+    
+    init(form: [String: FormValueDataType])
+    {
+        bodyParts = form.map { k, v in (fileName: k, value: v)}
+    }
+    
+    init()
+    {
     }
 
 }

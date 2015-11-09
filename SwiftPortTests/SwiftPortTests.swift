@@ -42,9 +42,8 @@ class SwiftPortTests: XCTestCase {
     
     func testCreateUser() {
         let json = ["userEmail": "1234@tom.com", "userPassword": "123456"]
-        let data = NetworkingDataType.JSON(json)
-        let task = Networking.upload(NSURL(string: CONSTANT.URL.POST_CREATE_USER)!, postData: data)
-        task.resume()
+        //let task = Networking.upload(NSURL(string: CONSTANT.URL.POST_CREATE_USER)!, postData: data)
+        //task.resume()
     }
     
     
@@ -52,10 +51,9 @@ class SwiftPortTests: XCTestCase {
         let expectation = expectationWithDescription(__FUNCTION__)
         
         let json = ["userName": "name", "userEmail": "1234@tom.com", "userPassword": "123456"]
-        let data = NetworkingDataType.JSON(json)
         
         let action = Networking.createAction(Networking.userLoginWithUserJSON)
-        action.apply(data).startWithNext{
+        action.apply(json).startWithNext{
             //XCTAssertNil($0, "\(try? NSJSONSerialization.JSONObjectWithData($0.1!, options: []) )")
             //XCTAssert(($0.0 as? NSHTTPURLResponse)?.statusCode == 200, "\($0)")
             XCTAssert(($0.0 as? NSHTTPURLResponse)?.statusCode == 200, "\($0)")
@@ -69,10 +67,8 @@ class SwiftPortTests: XCTestCase {
     func testGetAllVideosInfo() {
         
         let expectation = expectationWithDescription(__FUNCTION__)
-        guard let url = NSURL(string: CONSTANT.URL.GET_ALL_VIDEOS) else { return }
-        let request = NSURLRequest(URL: url)
         
-        let task = NSURLSession.sharedSession().downloadTaskWithRequest(request) {location, response, error in
+        let task = Networking.getAllMediaInfo(payload: nil) {data, response, error in
             if let err = error {
                 XCTFail("\(err)")
                 return
@@ -80,16 +76,12 @@ class SwiftPortTests: XCTestCase {
             
             let statusCode = (response as? NSHTTPURLResponse)?.statusCode ?? 0
             XCTAssert(statusCode == 200, "\(response)")
-            if let loc = location {
-                if let data = NSData(contentsOfURL: loc) {
-                    let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
-                    XCTAssertFalse(json != nil, "\(json)")
-                }
-            }
+            let json = try? NSJSONSerialization.JSONObjectWithData(data!, options: [])
+            XCTAssertFalse(json != nil, "\(json)")
             expectation.fulfill()
         }
         
-        task.resume()
+        task!.resume()
         waitForExpectationsWithTimeout(5.0, handler: nil)
     }
     
@@ -107,28 +99,20 @@ class SwiftPortTests: XCTestCase {
         var bytesRead = 0
         
         let s = ([UInt](0 ... 40000)).map{$0.description}.joinWithSeparator(" ")
-        let stream = NSInputStream(data: "faaaaaaaaa".dataUsingEncoding(NSUTF8StringEncoding)!)
+        let stream = NSInputStream(data: s.dataUsingEncoding(NSUTF8StringEncoding)!)
         var mixed = MixedInputStream()
-        /*
         mixed += stream
         mixed.open()
         XCTAssert(mixed.streamStatus == .Open, "mixed should be open")
-        XCTAssert(mixed.currentStream.streamStatus == .Open, "current should be open")
-*/
-        class kappa:NSObject, NSStreamDelegate {
-            @objc func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
-                XCTFail(eventCode.rawValue.description)
-            }
-        }
-        let f = kappa()
-        stream.delegate = f
+        XCTAssert(mixed.currentStream!.streamStatus == .Open, "current should be open")
+       
         let bufferLen = 32767
         var buffer = [UInt8](count: bufferLen, repeatedValue: 0)
         
         stream.open()
         bytesRead = stream.read(&buffer, maxLength: bufferLen)
         XCTFail(bytesRead.description)
-        var out = NSString(bytes: buffer, length: bytesRead, encoding: NSUTF8StringEncoding)!
+        let out = NSString(bytes: buffer, length: bytesRead, encoding: NSUTF8StringEncoding)!
         XCTFail(out as String)
         
     }
@@ -146,40 +130,10 @@ class SwiftPortTests: XCTestCase {
         var buffer = [UInt8](count: bufferLen, repeatedValue: 0)
         
         st.open()
-        var bytesRead = st.read(&buffer, maxLength: bufferLen)
+        let bytesRead = st.read(&buffer, maxLength: bufferLen)
         XCTFail("\(bytesRead)")
-        var s = NSString(bytes: buffer, length: bytesRead, encoding: NSUTF8StringEncoding)
+        let s = NSString(bytes: buffer, length: bytesRead, encoding: NSUTF8StringEncoding)
         XCTFail(s as? String ?? "")
-        
-    }
-    
-    func testMPScheduleToRL()
-    {
-      var mp = Multipart()
-        mp.appendField("userid", value: "18")
-        mp.appendField("channelid", value: "3")
-        mp.appendField("videoname", value: "Chi Long Qua Dumstering Kids")
-        let st = mp.stream()
-        
-        let bufferLen = 1024
-        var buffer = [UInt8](count: bufferLen, repeatedValue: 0)
-        var context = CFStreamClientContext(version: 0, info: nil,
-            retain: {x in
-                XCTFail("retain")
-                return x },
-            release: {_ in
-                XCTFail("release")
-            }, copyDescription: nil)
-        
-        func callback(stream: CFReadStream!, events: CFStreamEventType, ptr: UnsafeMutablePointer<Void>)
-        {
-            XCTFail("test")
-        }
-        
-        let requestedEvents: CFStreamEventType = [CFStreamEventType.HasBytesAvailable , CFStreamEventType.ErrorOccurred , CFStreamEventType.EndEncountered]
-        if(CFReadStreamSetClient(st, requestedEvents.rawValue, callback, &context)) {
-            CFReadStreamScheduleWithRunLoop(st, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode)
-        }
         
     }
     
@@ -221,34 +175,31 @@ class SwiftPortTests: XCTestCase {
     func testUploadMultipartFormData()
     {
         let expectation = expectationWithDescription(__FUNCTION__)
-        var mp = Multipart()
-        mp.appendField("userid", value: "18")
-        mp.appendField("channelid", value: "3")
-        mp.appendField("videoname", value: "Chi Long Qua Dumstering Kids")
-        var url = NSURL(fileURLWithPath: "/users/Kappa/Pictures/CLQ.jpg")
-        mp.appendField("image", value: "")
         
-        url = NSURL(fileURLWithPath: "/users/Kappa/Pictures/power.jpg")
-        //mp.appendField("video", value: File(fileURL: url)!)
-        mp.appendField("video", value: "")
+        let url0 = NSURL(fileURLWithPath: "/users/Kappa/Pictures/CLQ.jpg")
+        let url1 = NSURL(fileURLWithPath: "/users/Kappa/Pictures/power.jpg")
+        let pl:[String: FormValueDataType] = ["userid": "18", "channelid": "3", "videoname": "KeepoKappa", "image": File(nullableFileURL: url0)!, "video": File(nullableFileURL: url1)!]
         
-        let task = Networking.videoUploadWithMultipartFormData(NetworkingDataType.MultipartFormData(mp)) {data, response, error in
+        let testfunc = Networking.createTargetFunction(Networking.APIEndPoint(method: .POST, urlString: "http://requestb.in/1djavji1"))
+        
+        let task = testfunc(payload: pl) {data, response, error in
             XCTAssertNil(error, error?.debugDescription ?? "")
-            XCTFail("\(response)")
             XCTAssert((response as? NSHTTPURLResponse)?.statusCode ?? 0 == 200, response.debugDescription)
             
-            XCTFail("\(try? NSJSONSerialization.JSONObjectWithData(data!, options: []))")
             expectation.fulfill()
         }
-        task?.resume()
+        task!.resume()
         
-        waitForExpectationsWithTimeout(80.0, handler: nil)
+        waitForExpectationsWithTimeout(10.0, handler: nil)
     }
     
-    func test() {
+    func testFindUserByEmail() {
         let expectation = expectationWithDescription(__FUNCTION__)
         let json = ["userName": "name", "userEmail": "1234@tom.com", "userPassword": "123456"] as NSDictionary
-        let task = Networking.userLoginWithUserJSON(NetworkingDataType.JSON(json)) { data, response, error in
+        
+        let task = Networking.userLoginWithUserJSON(payload: json) { data, response, error in
+            XCTAssert((response as? NSHTTPURLResponse)?.statusCode ?? 0 == 200)
+            //XCTFail(try! NSJSONSerialization.JSONObjectWithData(data!, options: []).description ?? "")
             expectation.fulfill()
             
         }
@@ -259,8 +210,6 @@ class SwiftPortTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
-            
-
             // Put the code you want to measure the time of here.
         }
     }

@@ -19,14 +19,12 @@
 		B1A06D931BE1B3A700C712B1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D921BE1B3A700C712B1 /* Validation.swift */; };
 		B1A06D941BE1BC1200C712B1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D921BE1B3A700C712B1 /* Validation.swift */; };
 		B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D961BE1C41A00C712B1 /* Networking.swift */; };
-		B1A747131BE4483D0084AC98 /* NetworkingUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */; };
+		B1A747131BE4483D0084AC98 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* TaskCreator.swift */; };
 		B1ABA25C1BE317B200A60A7D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */; };
 		B1ABA25D1BE317B400A60A7D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B71BE2AB6C00388BD9 /* Result.framework */; };
-		B1B5D6901BE3C967007ED269 /* NetworkingVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */; };
 		B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
 		B1B5D6931BE3F01B007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
-		B1B5D6941BE3F03E007ED269 /* NetworkingVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */; };
-		B1B5D6981BE40F53007ED269 /* NetworkingUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */; };
+		B1B5D6981BE40F53007ED269 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* TaskCreator.swift */; };
 		B1B8556A1BE9814E0044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
 		B1B8556B1BE9C5250044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
 		B1C21A3F1BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */; };
@@ -65,9 +63,8 @@
 		B1A06D881BE1B36200C712B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A06D921BE1B3A700C712B1 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		B1A06D961BE1C41A00C712B1 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingVideo.swift; sourceTree = "<group>"; };
 		B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveNetworking.swift; sourceTree = "<group>"; };
-		B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingUpload.swift; sourceTree = "<group>"; };
+		B1B5D6971BE40F53007ED269 /* TaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCreator.swift; sourceTree = "<group>"; };
 		B1B855691BE9814E0044F616 /* MIME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIME.swift; sourceTree = "<group>"; };
 		B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
 		B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedStream.swift; sourceTree = "<group>"; };
@@ -174,8 +171,7 @@
 			children = (
 				B1A06D961BE1C41A00C712B1 /* Networking.swift */,
 				B16D368A1BEAB4B70093EFD3 /* Multipart/Form-Data */,
-				B1B5D6971BE40F53007ED269 /* NetworkingUpload.swift */,
-				B1B5D68F1BE3C967007ED269 /* NetworkingVideo.swift */,
+				B1B5D6971BE40F53007ED269 /* TaskCreator.swift */,
 				B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */,
 			);
 			name = Networking;
@@ -315,9 +311,8 @@
 				B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */,
 				B1A06D6F1BE1B36200C712B1 /* AppDelegate.swift in Sources */,
 				B1C21A421BE963DE00A8C9D3 /* MixedStream.swift in Sources */,
-				B1B5D6981BE40F53007ED269 /* NetworkingUpload.swift in Sources */,
+				B1B5D6981BE40F53007ED269 /* TaskCreator.swift in Sources */,
 				B1D106CD1BE2699100C61C11 /* Constants.swift in Sources */,
-				B1B5D6901BE3C967007ED269 /* NetworkingVideo.swift in Sources */,
 				B1A06D771BE1B36200C712B1 /* SwiftPort.xcdatamodeld in Sources */,
 				B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */,
 				B1A06D931BE1B3A700C712B1 /* Validation.swift in Sources */,
@@ -329,14 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B5D6931BE3F01B007ED269 /* ReactiveNetworking.swift in Sources */,
-				B1B5D6941BE3F03E007ED269 /* NetworkingVideo.swift in Sources */,
 				B1A06D871BE1B36200C712B1 /* SwiftPortTests.swift in Sources */,
 				B1A06D941BE1BC1200C712B1 /* Validation.swift in Sources */,
 				B1B8556B1BE9C5250044F616 /* MIME.swift in Sources */,
 				B1D106CF1BE26C0100C61C11 /* Constants.swift in Sources */,
 				B1C21A401BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */,
 				B1C21A431BE963DE00A8C9D3 /* MixedStream.swift in Sources */,
-				B1A747131BE4483D0084AC98 /* NetworkingUpload.swift in Sources */,
+				B1A747131BE4483D0084AC98 /* TaskCreator.swift in Sources */,
 				B1D106D01BE275B800C61C11 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,48 +48,7 @@ class MixedInputStream: NSInputStream, NSStreamDelegate {
         super.init(data: NSData())
         //FailFish
     }
-    
-    override func open() {
-        guard _streamStatus == .NotOpen else { return }
-        
-        if let cs = currentStream {
-            _streamStatus = .Open
-            cs.open()
-        }
-    }
-    
-    var hasReachedEnd: Bool {
-        guard let stream = currentStream else { return true }
-        if streamsIdx == streams.count - 1 && !stream.hasBytesAvailable {
-            return true
-        }
-        return false
-    }
-    
-    override func close() {
-        _streamStatus = .Closed
-        currentStream?.close()
-        print("> Stream Closed")
-    }
-    
-    
-    override var hasBytesAvailable: Bool {
-        return !hasReachedEnd
-    }
-    
-    //MARK: function overrides
-    
-    override func read(buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int {
-        //_streamStatus = .Reading
-        let rb = doRead(buffer, maxLength: len)
-        
-        if hasReachedEnd {
-            _streamStatus = .AtEnd
-        }
-        return rb
-    }
-    
-    func doRead(buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int {
+        func doRead(buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int {
         guard streamStatus == .Open else { return -1 }
         
         guard len > 0 else {
@@ -132,10 +91,48 @@ class MixedInputStream: NSInputStream, NSStreamDelegate {
         guard nextBytesRead  >= 0 else { return nextBytesRead } //error propagates
         return bytesRead + nextBytesRead
     }
-    
-    override func getBuffer(buffer: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>>, length len: UnsafeMutablePointer<Int>) -> Bool {
+   
+    var hasReachedEnd: Bool {
+        guard let stream = currentStream else { return true }
+        if streamsIdx == streams.count - 1 && !stream.hasBytesAvailable {
+            return true
+        }
         return false
     }
+  
+    
+    override var hasBytesAvailable: Bool {
+        return !hasReachedEnd
+    }
+    
+    //MARK: function overrides
+    override func open() {
+        guard _streamStatus == .NotOpen else { return }
+        
+        if let cs = currentStream {
+            _streamStatus = .Open
+            cs.open()
+        }
+    }
+    
+    override func close() {
+        _streamStatus = .Closed
+        currentStream?.close()
+        //print("> Stream Closed")
+    }
+    
+    //Not thread-safe
+    override func read(buffer: UnsafeMutablePointer<UInt8>, maxLength len: Int) -> Int {
+        //_streamStatus = .Reading
+        let rb = doRead(buffer, maxLength: len)
+        
+        if hasReachedEnd {
+            _streamStatus = .AtEnd
+        }
+        return rb
+    }
+    
+
     
     // MARK: We don't ship junk JobsFace 4Head EleGiggle
     //
@@ -155,39 +152,9 @@ class MixedInputStream: NSInputStream, NSStreamDelegate {
     //    ░░░░░▀█▄▒▒░░░░▒▄▀░░░
     //    ░░░░░░░░▀▀█▄▄▄▄▀░░░
 
-    
-    //override func propertyForKey(key: String) -> AnyObject? { return nil }
-    
-    //override func setProperty(property: AnyObject?, forKey key: String) -> Bool { return false }
-    
-    override func scheduleInRunLoop(aRunLoop: NSRunLoop, forMode mode: String) { }
-    override func removeFromRunLoop(aRunLoop: NSRunLoop, forMode mode: String) { }
-    
-   	var copiedCallback: CFReadStreamClientCallBack? = nil
-    var copiedContext: CFStreamClientContext? = nil
-    var requestedEvents: CFOptionFlags = CFStreamEventType.None.rawValue
-    
     func _setCFClientFlags(inFlags: CFOptionFlags, callback: CFReadStreamClientCallBack!, context: UnsafeMutablePointer<CFStreamClientContext>) -> Bool
-    {/*
-        if context != nil {
-            copiedCallback = callback
-            requestedEvents = inFlags
-            copiedContext = context.memory
-            
-            if copiedContext!.info != nil && copiedContext!.retain != nil {
-                copiedContext!.retain(copiedContext!.info)
-            }
-        } else {
-            requestedEvents = CFStreamEventType.None.rawValue
-            copiedCallback = nil
-            
-            if copiedContext?.info != nil && copiedContext?.release != nil {
-                copiedContext!.release(copiedContext!.info)
-            }
-            
-            copiedContext = nil
-        }*/
-        return true
+    {
+        return false
     }
     
     func _scheduleInCFRunLoop(runLoop: CFRunLoopRef, forMode aMode:CFStringRef) { }
@@ -205,9 +172,6 @@ class MixedInputStream: NSInputStream, NSStreamDelegate {
     
     deinit
     {
-        if(copiedContext?.release != nil) {
-            copiedContext!.release(copiedContext!.info)
-        }
         if streamStatus != .Closed {
             close()
         }

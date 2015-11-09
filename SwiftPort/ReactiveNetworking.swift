@@ -11,10 +11,9 @@ import ReactiveCocoa
 
 extension Networking {
     // MARK: Reactive
-    
-    static func createAction(function: (payload: NetworkingDataType, completionHandler: CompletionHandler) -> NSURLSessionTask?) -> Action<NetworkingDataType, (NSURLResponse, NSData?), NSError>
+    static func createAction(function: (payload: Any?, completionHandler: responseHandler) -> NSURLSessionTask?) -> Action<Any?, (NSURLResponse, NSData?), NSError>
     {
-        return Action<NetworkingDataType, (NSURLResponse, NSData?), NSError> {payload in
+        return Action<Any?, (NSURLResponse, NSData?), NSError> {payload in
             SignalProducer<(NSURLResponse, NSData?), NSError> {sink, disposable in
                 guard let task = function(payload: payload, completionHandler: {data, response, error in
                     if let err = error {
@@ -35,7 +34,7 @@ extension Networking {
     }
     
     //example
-    static var userLoginAction: Action<NetworkingDataType, (NSURLResponse, NSData?), NSError> {
+    static var userLoginAction: Action<Any?, (NSURLResponse, NSData?), NSError> {
         return createAction(userRegisterWithUserJSON) 
     }
 }

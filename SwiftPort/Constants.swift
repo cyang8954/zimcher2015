@@ -1,12 +1,16 @@
-//
-//  Constants.swift
-//  SwiftPort
-//
-//  Created by Weiyu Huang on 10/29/15.
-//  Copyright © 2015 Kappa. All rights reserved.
-//
-
 import Foundation
+
+protocol APIEndPointsCollection {
+    static var BASE_ENDPOINT_URL: String {get}
+    static func CREATE_ENDPOINT(method: Networking.HTTPMethod, endPointString: String, payloadType: Networking.NetworkingDataType?) -> Networking.APIEndPoint
+}
+
+extension APIEndPointsCollection {
+    static func CREATE_ENDPOINT(method: Networking.HTTPMethod = CONSTANT.ENDPOINT.DEFAULT_METHOD, endPointString: String, payloadType: Networking.NetworkingDataType? = nil) -> Networking.APIEndPoint
+    {
+        return Networking.APIEndPoint(method: method, urlString: BASE_ENDPOINT_URL + endPointString, payloadType: payloadType)
+    }
+}
 
 struct CONSTANT {
     struct VALIDATION {
@@ -16,41 +20,55 @@ struct CONSTANT {
         private static let EMAIL_LAX_STRING = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
         static let EMAIL_FILTER = EMAIL_USE_STRICT_FILTER ? EMAIL_STRICTER_FILTER_STRING : EMAIL_LAX_STRING
         
-        
         //user name
         static let USER_NAME_ALLOWED_CHARS = "^[A-Za-z0-9_ ]*$"
     }
     
-    struct URL {
-        private static let BASE_URL = "http://zimcher.azurewebsites.net/"
-        private static let BASE_API_URL = BASE_URL + "api/"
+    struct ENDPOINT {
+        static let DEFAULT_METHOD = Networking.HTTPMethod.GET
+        //meaningless?
+        static let THRESHOLD_SIZE_FOR_USING_STREAM = UInt64(((100) << 3 + 000) << 3 + 000)
         
-        //users
-        private static let BASE_USER_API_URL = BASE_API_URL + "users/"
+        private struct BASE_URL {
+            static let URL = "http://zimcher.azurewebsites.net/"
+            static let API_URL = URL + "api/"
+        }
         
-        static let GET_ALL_USERS = BASE_USER_API_URL + "getallusers"
-        static let POST_FIND_USER_BY_ID = BASE_USER_API_URL + "finduserbyid/"
-        static let POST_LOGIN = BASE_USER_API_URL + "finduserbyemail"
-        static let POST_CREATE_USER = BASE_USER_API_URL + "createuser"
+        struct USER: APIEndPointsCollection {
+            static let BASE_ENDPOINT_URL = BASE_URL.API_URL + "users/"
+            
+            static let ALL_USERS = USER.CREATE_ENDPOINT(.GET, endPointString: "getallusers")
+            static let FIND_BY_ID = USER.CREATE_ENDPOINT(.POST, endPointString: "finduserbyid", payloadType: .URLEncodedForm)
+            static let FIND_BY_EMAIL = USER.CREATE_ENDPOINT(.POST, endPointString: "finduserbyemail", payloadType: .JSON)
+            static let REGISTER = USER.CREATE_ENDPOINT(.POST, endPointString: "createuser", payloadType: .JSON)
+            static let UPLOAD_AVATAR = USER.CREATE_ENDPOINT(.POST, endPointString: "uploadUserImage", payloadType: .MultipartFormData)
+        }
         
-        //video
-        private static let BASE_VIDEO_API_URL = BASE_API_URL + "videos/"
+        struct MEDIA: APIEndPointsCollection {
+            static let BASE_ENDPOINT_URL = BASE_URL.API_URL + "videos/"
+            
+            static let ALL_VIDEOS = MEDIA.CREATE_ENDPOINT(.GET, endPointString: "getallvideos")
+            static let UPLOAD = MEDIA.CREATE_ENDPOINT(.POST, endPointString: "uploadVideo", payloadType: .MultipartFormData)
+        }
         
+        struct REVIEW: APIEndPointsCollection {
+            static let BASE_ENDPOINT_URL = BASE_URL.API_URL + "reviews/"
+            
+            static let CREATE = REVIEW.CREATE_ENDPOINT(.POST, endPointString: "createReview", payloadType: .JSON)
+        }
         
-        static let GET_ALL_VIDEOS = BASE_VIDEO_API_URL + "getallvideos"
-        static let POST_UPLOAD_VIDEO = BASE_VIDEO_API_URL + "uploadVideo"
-        static let POST_POST_VIDEO_INFO = BASE_VIDEO_API_URL + "postVideo"
+        struct CHANNEL: APIEndPointsCollection {
+            static let BASE_ENDPOINT_URL = BASE_URL.API_URL + "channels/"
+            
+            static let GET_CHANNEL_BY_NAME = CHANNEL.CREATE_ENDPOINT(.POST, endPointString: "searchChannelByName", payloadType: .URLEncodedForm)
+            static let GET_ALL_CHANNELS = CHANNEL.CREATE_ENDPOINT(.GET, endPointString: "getAllChannels")
+        }
         
-        //channel
-        private static let BASE_CHANNEL_API_URL = BASE_API_URL + "channels/"
-        
-        static let GET_ALL_CHANNELS = BASE_CHANNEL_API_URL + "getAllChannels"
-        static let POST_SEARCH_CHANNEL_BY_NAME = BASE_CHANNEL_API_URL + "searchChannelByName"
-        
+
     }
     
     struct JSON_KEY_PATH {
-        struct VIDEO {
+        struct MEDIA {
             static let ID = "videoId"
             static let NAME = "videoName"
             static let URL = "videoURL"
@@ -79,8 +97,8 @@ struct CONSTANT {
     }
     
     struct REGISTER {
-        static let USERNAME_KEY = "username";
-        static let PASSWORD_KEY = "password";
-        static let EMAIL_KEY = "email";
+        static let USERNAME_KEY = "username"
+        static let PASSWORD_KEY = "password"
+        static let EMAIL_KEY = "email"
     }
 }
