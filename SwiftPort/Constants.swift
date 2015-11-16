@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol APIEndPointsCollection {
     static var BASE_ENDPOINT_URL: String {get}
@@ -100,5 +101,20 @@ struct CONSTANT {
         static let USERNAME_KEY = "username"
         static let PASSWORD_KEY = "password"
         static let EMAIL_KEY = "email"
+    }
+    
+    struct COLORSCHEME_DEFAULT {
+
+    }
+    
+    struct PALETTE_DEFAULT {
+       static let BLUE = UIColor(red: 96/256.0, green: 111/256.0, blue: 214/256.0, alpha: 1)
+        static let DARK_BLUE = UIColor(red: 22/256.0, green: 24/256.0, blue: 45/256.0, alpha: 1)
+        static let SLATE_BLUE = UIColor(red: 95/256.0, green: 108/256.0, blue: 217/256.0, alpha: 0.9)
+        static let CORN_FLOWER_BLUE = UIColor(red: 95/256.0, green: 108/256.0, blue: 217/256.0, alpha: 1)
+    }
+    
+    struct UI {
+        static let LOGIN_BUTTON_CORNER_RADIUS = CGFloat(3.0)
     }
 }

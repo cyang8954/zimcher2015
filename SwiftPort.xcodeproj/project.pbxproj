@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B19F30B81BE2AB6C00388BD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B71BE2AB6C00388BD9 /* Result.framework */; };
-		B19F30BA1BE2AB7800388BD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */; };
+		B1161B7D1BF83B4600E2C5B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1161B7C1BF83B4600E2C5B3 /* Extensions.swift */; };
+		B1161B821BF8401300E2C5B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1161B811BF8401300E2C5B3 /* LoginViewController.swift */; };
+		B1161B841BF8413B00E2C5B3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1161B831BF8413B00E2C5B3 /* SignUpViewController.swift */; };
+		B13B3D701BF6B14C00D97E69 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13B3D6F1BF6B14C00D97E69 /* Discover.storyboard */; };
+		B1926AF71BF67CBA00F48D81 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1926AF61BF67CBA00F48D81 /* TabBarViewController.swift */; };
 		B19F30BD1BE2AC5C00388BD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */; };
 		B1A06D6F1BE1B36200C712B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */; };
-		B1A06D711BE1B36200C712B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D701BE1B36200C712B1 /* ViewController.swift */; };
 		B1A06D771BE1B36200C712B1 /* SwiftPort.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D751BE1B36200C712B1 /* SwiftPort.xcdatamodeld */; };
 		B1A06D791BE1B36200C712B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A06D781BE1B36200C712B1 /* Assets.xcassets */; };
 		B1A06D7C1BE1B36200C712B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */; };
@@ -20,17 +22,27 @@
 		B1A06D941BE1BC1200C712B1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D921BE1B3A700C712B1 /* Validation.swift */; };
 		B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D961BE1C41A00C712B1 /* Networking.swift */; };
 		B1A747131BE4483D0084AC98 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* TaskCreator.swift */; };
-		B1ABA25C1BE317B200A60A7D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */; };
-		B1ABA25D1BE317B400A60A7D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F30B71BE2AB6C00388BD9 /* Result.framework */; };
 		B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
 		B1B5D6931BE3F01B007ED269 /* ReactiveNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */; };
 		B1B5D6981BE40F53007ED269 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5D6971BE40F53007ED269 /* TaskCreator.swift */; };
 		B1B8556A1BE9814E0044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
 		B1B8556B1BE9C5250044F616 /* MIME.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B855691BE9814E0044F616 /* MIME.swift */; };
+		B1C114291BF6D0670000B066 /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1C114281BF6D0670000B066 /* Righteous-Regular.ttf */; };
+		B1C1142B1BF6D2920000B066 /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1C1142A1BF6D2920000B066 /* SF-UI-Display-Medium.otf */; };
+		B1C1142E1BF6D5FB0000B066 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1C1142D1BF6D5FB0000B066 /* SF-UI-Display-Semibold.otf */; };
+		B1C114301BF6D8C60000B066 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1142F1BF6D8C60000B066 /* EntryViewController.swift */; };
+		B1C114321BF6EE120000B066 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C114311BF6EE120000B066 /* LogIn.storyboard */; };
 		B1C21A3F1BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */; };
 		B1C21A401BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */; };
 		B1C21A421BE963DE00A8C9D3 /* MixedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */; };
 		B1C21A431BE963DE00A8C9D3 /* MixedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */; };
+		B1C8731B1BF8E1130061002F /* InvalidInputAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8731A1BF8E1130061002F /* InvalidInputAlert.swift */; };
+		B1C8731D1BF8E2AF0061002F /* InvalidInputAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C8731C1BF8E2AF0061002F /* InvalidInputAlertView.xib */; };
+		B1C8731F1BF93C660061002F /* UIValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8731E1BF93C660061002F /* UIValidatableTextField.swift */; };
+		B1C873241BF968AF0061002F /* UIRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C873231BF968AF0061002F /* UIRadiusButton.swift */; };
+		B1C873261BF96E500061002F /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C873251BF96E500061002F /* ForgetPasswordViewController.swift */; };
+		B1C8732A1BF982CF0061002F /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C873291BF982CF0061002F /* LogInSignUpViewController.swift */; };
+		B1C8732C1BF9862E0061002F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8732B1BF9862E0061002F /* Keyboard.swift */; };
 		B1D106CD1BE2699100C61C11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D106CC1BE2699100C61C11 /* Constants.swift */; };
 		B1D106CF1BE26C0100C61C11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D106CC1BE2699100C61C11 /* Constants.swift */; };
 		B1D106D01BE275B800C61C11 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A06D961BE1C41A00C712B1 /* Networking.swift */; };
@@ -47,13 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1161B7C1BF83B4600E2C5B3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B1161B811BF8401300E2C5B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B1161B831BF8413B00E2C5B3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B13B3D6F1BF6B14C00D97E69 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = SOURCE_ROOT; };
 		B16F99A51BE807FB009EC8D1 /* Zimcher.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Zimcher.playground; path = SwiftPort/Zimcher.playground; sourceTree = SOURCE_ROOT; };
-		B19F30B71BE2AB6C00388BD9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		B1926AF61BF67CBA00F48D81 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		B1A06D6B1BE1B36200C712B1 /* SwiftPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1A06D701BE1B36200C712B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1A06D761BE1B36200C712B1 /* SwiftPort.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftPort.xcdatamodel; sourceTree = "<group>"; };
 		B1A06D781BE1B36200C712B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1A06D7B1BE1B36200C712B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,8 +80,20 @@
 		B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveNetworking.swift; sourceTree = "<group>"; };
 		B1B5D6971BE40F53007ED269 /* TaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCreator.swift; sourceTree = "<group>"; };
 		B1B855691BE9814E0044F616 /* MIME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIME.swift; sourceTree = "<group>"; };
+		B1C114281BF6D0670000B066 /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		B1C1142A1BF6D2920000B066 /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		B1C1142D1BF6D5FB0000B066 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
+		B1C1142F1BF6D8C60000B066 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		B1C114311BF6EE120000B066 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = SOURCE_ROOT; };
 		B1C21A3E1BE903DA00A8C9D3 /* MultipartUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
 		B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedStream.swift; sourceTree = "<group>"; };
+		B1C8731A1BF8E1130061002F /* InvalidInputAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidInputAlert.swift; sourceTree = "<group>"; };
+		B1C8731C1BF8E2AF0061002F /* InvalidInputAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvalidInputAlertView.xib; sourceTree = "<group>"; };
+		B1C8731E1BF93C660061002F /* UIValidatableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIValidatableTextField.swift; sourceTree = "<group>"; };
+		B1C873231BF968AF0061002F /* UIRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRadiusButton.swift; sourceTree = "<group>"; };
+		B1C873251BF96E500061002F /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		B1C873291BF982CF0061002F /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
+		B1C8732B1BF9862E0061002F /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		B1D106CC1BE2699100C61C11 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,8 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19F30BA1BE2AB7800388BD9 /* ReactiveCocoa.framework in Frameworks */,
-				B19F30B81BE2AB6C00388BD9 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,14 +109,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1ABA25C1BE317B200A60A7D /* ReactiveCocoa.framework in Frameworks */,
-				B1ABA25D1BE317B400A60A7D /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1161B7B1BF83B0500E2C5B3 /* Signup & Login */ = {
+			isa = PBXGroup;
+			children = (
+				B1C114311BF6EE120000B066 /* LogIn.storyboard */,
+				B1C873291BF982CF0061002F /* LogInSignUpViewController.swift */,
+				B1C873231BF968AF0061002F /* UIRadiusButton.swift */,
+				B1C873201BF94EF10061002F /* AlertPanel */,
+				B1C1142F1BF6D8C60000B066 /* EntryViewController.swift */,
+				B1C8732F1BF98FCB0061002F /* Keyboard */,
+				B1161B831BF8413B00E2C5B3 /* SignUpViewController.swift */,
+				B1161B811BF8401300E2C5B3 /* LoginViewController.swift */,
+				B1C873251BF96E500061002F /* ForgetPasswordViewController.swift */,
+			);
+			name = "Signup & Login";
+			sourceTree = "<group>";
+		};
+		B1161B7E1BF83B6700E2C5B3 /* CONSTANTS */ = {
+			isa = PBXGroup;
+			children = (
+				B1D106CC1BE2699100C61C11 /* Constants.swift */,
+			);
+			name = CONSTANTS;
+			sourceTree = "<group>";
+		};
+		B13B3D711BF6B15600D97E69 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */,
+				B13B3D6F1BF6B14C00D97E69 /* Discover.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		B16D368A1BEAB4B70093EFD3 /* Multipart/Form-Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +163,6 @@
 				B1A06D6D1BE1B36200C712B1 /* SwiftPort */,
 				B1A06D851BE1B36200C712B1 /* SwiftPortTests */,
 				B1A06D6C1BE1B36200C712B1 /* Products */,
-				B19F30B91BE2AB7800388BD9 /* ReactiveCocoa.framework */,
-				B19F30B71BE2AB6C00388BD9 /* Result.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +178,10 @@
 		B1A06D6D1BE1B36200C712B1 /* SwiftPort */ = {
 			isa = PBXGroup;
 			children = (
-				B19F30BC1BE2AC5C00388BD9 /* Main.storyboard */,
-				B1A06D701BE1B36200C712B1 /* ViewController.swift */,
-				B1D106CC1BE2699100C61C11 /* Constants.swift */,
+				B1161B7B1BF83B0500E2C5B3 /* Signup & Login */,
+				B13B3D711BF6B15600D97E69 /* Storyboards */,
+				B1C873221BF950540061002F /* Tab bar */,
+				B1161B7E1BF83B6700E2C5B3 /* CONSTANTS */,
 				B1A747141BE473560084AC98 /* Networking */,
 				B1A06D951BE1BE0800C712B1 /* Util */,
 				B1D106CE1BE26BA700C61C11 /* CoreData */,
@@ -149,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A06D6E1BE1B36200C712B1 /* AppDelegate.swift */,
+				B1C1142C1BF6D29C0000B066 /* Fonts */,
 				B1A06D781BE1B36200C712B1 /* Assets.xcassets */,
 				B1A06D7A1BE1B36200C712B1 /* LaunchScreen.storyboard */,
 				B1A06D7D1BE1B36200C712B1 /* Info.plist */,
@@ -159,9 +214,10 @@
 		B1A06D951BE1BE0800C712B1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B1161B7C1BF83B4600E2C5B3 /* Extensions.swift */,
 				B1B855691BE9814E0044F616 /* MIME.swift */,
 				B1C21A411BE963DE00A8C9D3 /* MixedStream.swift */,
-				B1A06D921BE1B3A700C712B1 /* Validation.swift */,
+				B1C873211BF950110061002F /* Validation */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -175,6 +231,50 @@
 				B1B5D6911BE3EBDD007ED269 /* ReactiveNetworking.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		B1C1142C1BF6D29C0000B066 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B1C1142D1BF6D5FB0000B066 /* SF-UI-Display-Semibold.otf */,
+				B1C1142A1BF6D2920000B066 /* SF-UI-Display-Medium.otf */,
+				B1C114281BF6D0670000B066 /* Righteous-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		B1C873201BF94EF10061002F /* AlertPanel */ = {
+			isa = PBXGroup;
+			children = (
+				B1C8731C1BF8E2AF0061002F /* InvalidInputAlertView.xib */,
+				B1C8731A1BF8E1130061002F /* InvalidInputAlert.swift */,
+			);
+			name = AlertPanel;
+			sourceTree = "<group>";
+		};
+		B1C873211BF950110061002F /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				B1A06D921BE1B3A700C712B1 /* Validation.swift */,
+				B1C8731E1BF93C660061002F /* UIValidatableTextField.swift */,
+			);
+			name = Validation;
+			sourceTree = "<group>";
+		};
+		B1C873221BF950540061002F /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				B1926AF61BF67CBA00F48D81 /* TabBarViewController.swift */,
+			);
+			name = "Tab bar";
+			sourceTree = "<group>";
+		};
+		B1C8732F1BF98FCB0061002F /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B1C8732B1BF9862E0061002F /* Keyboard.swift */,
+			);
+			name = Keyboard;
 			sourceTree = "<group>";
 		};
 		B1D106CE1BE26BA700C61C11 /* CoreData */ = {
@@ -267,8 +367,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C1142E1BF6D5FB0000B066 /* SF-UI-Display-Semibold.otf in Resources */,
+				B1C114321BF6EE120000B066 /* LogIn.storyboard in Resources */,
+				B1C1142B1BF6D2920000B066 /* SF-UI-Display-Medium.otf in Resources */,
 				B19F30BD1BE2AC5C00388BD9 /* Main.storyboard in Resources */,
+				B13B3D701BF6B14C00D97E69 /* Discover.storyboard in Resources */,
+				B1C114291BF6D0670000B066 /* Righteous-Regular.ttf in Resources */,
 				B1A06D7C1BE1B36200C712B1 /* LaunchScreen.storyboard in Resources */,
+				B1C8731D1BF8E2AF0061002F /* InvalidInputAlertView.xib in Resources */,
 				B1A06D791BE1B36200C712B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,8 +395,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			outputPaths = (
 			);
@@ -306,16 +410,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B8556A1BE9814E0044F616 /* MIME.swift in Sources */,
+				B1C8731B1BF8E1130061002F /* InvalidInputAlert.swift in Sources */,
+				B1C8732A1BF982CF0061002F /* LogInSignUpViewController.swift in Sources */,
+				B1C873261BF96E500061002F /* ForgetPasswordViewController.swift in Sources */,
 				B1C21A3F1BE903DA00A8C9D3 /* MultipartUpload.swift in Sources */,
-				B1A06D711BE1B36200C712B1 /* ViewController.swift in Sources */,
 				B1A06D971BE1C41A00C712B1 /* Networking.swift in Sources */,
+				B1161B821BF8401300E2C5B3 /* LoginViewController.swift in Sources */,
+				B1926AF71BF67CBA00F48D81 /* TabBarViewController.swift in Sources */,
+				B1C114301BF6D8C60000B066 /* EntryViewController.swift in Sources */,
+				B1C873241BF968AF0061002F /* UIRadiusButton.swift in Sources */,
 				B1A06D6F1BE1B36200C712B1 /* AppDelegate.swift in Sources */,
 				B1C21A421BE963DE00A8C9D3 /* MixedStream.swift in Sources */,
 				B1B5D6981BE40F53007ED269 /* TaskCreator.swift in Sources */,
+				B1C8732C1BF9862E0061002F /* Keyboard.swift in Sources */,
 				B1D106CD1BE2699100C61C11 /* Constants.swift in Sources */,
+				B1161B841BF8413B00E2C5B3 /* SignUpViewController.swift in Sources */,
 				B1A06D771BE1B36200C712B1 /* SwiftPort.xcdatamodeld in Sources */,
 				B1B5D6921BE3EBDD007ED269 /* ReactiveNetworking.swift in Sources */,
 				B1A06D931BE1B3A700C712B1 /* Validation.swift in Sources */,
+				B1C8731F1BF93C660061002F /* UIValidatableTextField.swift in Sources */,
+				B1161B7D1BF83B4600E2C5B3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

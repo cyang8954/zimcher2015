@@ -7,7 +7,7 @@ struct Networking {
         let method: HTTPMethod
         let url: NSURL
         let payloadType: NetworkingDataType?
-        //explict restriction on payload data type
+        //explict restriction on payload data types
         
         //let template: [String: FormValueDataType]
         //template is only for POSTing forms and JSON?
@@ -78,7 +78,6 @@ struct Networking {
                 self.init(type: .JSON, data: data)
             }
         }
-        
         
         var headers: [String: String] {
             switch type {

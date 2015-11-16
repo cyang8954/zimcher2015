@@ -27,7 +27,7 @@ class SwiftPortTests: XCTestCase {
         
         let emailAddresses = ["kappa123@gmail.com"]
         _ = emailAddresses.map {email in
-            XCTAssert(IsValid.email(email) , "Error: \(email)")
+            XCTAssert(IsValid.email(input: email) , "Error: \(email)")
         }
         
         
@@ -36,14 +36,12 @@ class SwiftPortTests: XCTestCase {
     func testUserNameValidation() {
         let validNames = ["kappa123"]
         for name in validNames {
-            XCTAssert(IsValid.userName(name), "Error: \(name) should be valid")
+            XCTAssert(IsValid.userName(input: name), "Error: \(name) should be valid")
         }
     }
     
     func testCreateUser() {
-        let json = ["userEmail": "1234@tom.com", "userPassword": "123456"]
-        //let task = Networking.upload(NSURL(string: CONSTANT.URL.POST_CREATE_USER)!, postData: data)
-        //task.resume()
+        //let json = ["userEmail": "1234@tom.com", "userPassword": "123456"]
     }
     
     
