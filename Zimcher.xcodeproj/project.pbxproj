@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1A750471BFA5307002E92AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A750461BFA5307002E92AF /* Assets.xcassets */; };
 		B1A750551BFA5308002E92AF /* ZimcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A750541BFA5308002E92AF /* ZimcherTests.swift */; };
 		B1A750821BFA53CC002E92AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A7506C1BFA53CC002E92AF /* Constants.swift */; };
-		B1A7508F1BFA53FF002E92AF /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1A7508B1BFA53FF002E92AF /* SF-UI-Display-Semibold.otf */; };
-		B1A750901BFA53FF002E92AF /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1A7508C1BFA53FF002E92AF /* SF-UI-Display-Medium.otf */; };
-		B1A750911BFA53FF002E92AF /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1A7508D1BFA53FF002E92AF /* Righteous-Regular.ttf */; };
 		B1A750B91BFA573E002E92AF /* InvalidInputAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A750981BFA573E002E92AF /* InvalidInputAlert.swift */; };
 		B1A750BA1BFA573E002E92AF /* InvalidInputAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A750991BFA573E002E92AF /* InvalidInputAlertView.xib */; };
 		B1A750BD1BFA573E002E92AF /* UIRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A750A01BFA573E002E92AF /* UIRadiusButton.swift */; };
@@ -37,6 +33,10 @@
 		B1A750D41BFA57F1002E92AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A750D11BFA57F1002E92AF /* Main.storyboard */; };
 		B1A750D51BFA57F1002E92AF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A750D21BFA57F1002E92AF /* TabBarViewController.swift */; };
 		B1A750D71BFA58C4002E92AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A750D61BFA58C4002E92AF /* LaunchScreen.storyboard */; };
+		B1F34ECC1BFA61D90044155D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F34EC71BFA61D90044155D /* Assets.xcassets */; };
+		B1F34ECD1BFA61D90044155D /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1F34EC91BFA61D90044155D /* Righteous-Regular.ttf */; };
+		B1F34ECE1BFA61D90044155D /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1F34ECA1BFA61D90044155D /* SF-UI-Display-Medium.otf */; };
+		B1F34ECF1BFA61D90044155D /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1F34ECB1BFA61D90044155D /* SF-UI-Display-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,14 +51,10 @@
 
 /* Begin PBXFileReference section */
 		B1A7503C1BFA5307002E92AF /* Zimcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zimcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1A750461BFA5307002E92AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1A750501BFA5308002E92AF /* ZimcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZimcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A750541BFA5308002E92AF /* ZimcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZimcherTests.swift; sourceTree = "<group>"; };
 		B1A750561BFA5308002E92AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A7506C1BFA53CC002E92AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B1A7508B1BFA53FF002E92AF /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
-		B1A7508C1BFA53FF002E92AF /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
-		B1A7508D1BFA53FF002E92AF /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Righteous-Regular.ttf"; path = "../Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		B1A750981BFA573E002E92AF /* InvalidInputAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidInputAlert.swift; sourceTree = "<group>"; };
 		B1A750991BFA573E002E92AF /* InvalidInputAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvalidInputAlertView.xib; sourceTree = "<group>"; };
 		B1A750A01BFA573E002E92AF /* UIRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRadiusButton.swift; sourceTree = "<group>"; };
@@ -83,6 +79,10 @@
 		B1A750D11BFA57F1002E92AF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B1A750D21BFA57F1002E92AF /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B1A750D61BFA58C4002E92AF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1F34EC71BFA61D90044155D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1F34EC91BFA61D90044155D /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		B1F34ECA1BFA61D90044155D /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		B1F34ECB1BFA61D90044155D /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 				B1A750A91BFA573E002E92AF /* NetworkingHelper */,
 				B1A750B41BFA573E002E92AF /* Utils */,
 				B1A7506C1BFA53CC002E92AF /* Constants.swift */,
-				B1A750921BFA540C002E92AF /* Resources */,
+				B1F34EC61BFA61D90044155D /* Resources */,
 			);
 			path = Zimcher;
 			sourceTree = "<group>";
@@ -146,26 +146,6 @@
 				B1A750561BFA5308002E92AF /* Info.plist */,
 			);
 			path = ZimcherTests;
-			sourceTree = "<group>";
-		};
-		B1A7508E1BFA53FF002E92AF /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B1A7508B1BFA53FF002E92AF /* SF-UI-Display-Semibold.otf */,
-				B1A7508C1BFA53FF002E92AF /* SF-UI-Display-Medium.otf */,
-				B1A7508D1BFA53FF002E92AF /* Righteous-Regular.ttf */,
-			);
-			name = Fonts;
-			path = ../../SwiftPort/SwiftPort;
-			sourceTree = "<group>";
-		};
-		B1A750921BFA540C002E92AF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B1A7508E1BFA53FF002E92AF /* Fonts */,
-				B1A750461BFA5307002E92AF /* Assets.xcassets */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		B1A750971BFA573E002E92AF /* AlertPanel */ = {
@@ -263,6 +243,25 @@
 			path = MainScenes;
 			sourceTree = "<group>";
 		};
+		B1F34EC61BFA61D90044155D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1F34EC71BFA61D90044155D /* Assets.xcassets */,
+				B1F34EC81BFA61D90044155D /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1F34EC81BFA61D90044155D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B1F34EC91BFA61D90044155D /* Righteous-Regular.ttf */,
+				B1F34ECA1BFA61D90044155D /* SF-UI-Display-Medium.otf */,
+				B1F34ECB1BFA61D90044155D /* SF-UI-Display-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,14 +343,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A750911BFA53FF002E92AF /* Righteous-Regular.ttf in Resources */,
-				B1A750471BFA5307002E92AF /* Assets.xcassets in Resources */,
 				B1A750D41BFA57F1002E92AF /* Main.storyboard in Resources */,
 				B1A750D71BFA58C4002E92AF /* LaunchScreen.storyboard in Resources */,
+				B1F34ECF1BFA61D90044155D /* SF-UI-Display-Semibold.otf in Resources */,
+				B1F34ECD1BFA61D90044155D /* Righteous-Regular.ttf in Resources */,
+				B1F34ECE1BFA61D90044155D /* SF-UI-Display-Medium.otf in Resources */,
 				B1A750D31BFA57F1002E92AF /* Discover.storyboard in Resources */,
-				B1A750901BFA53FF002E92AF /* SF-UI-Display-Medium.otf in Resources */,
 				B1A750C81BFA573E002E92AF /* LogIn.storyboard in Resources */,
-				B1A7508F1BFA53FF002E92AF /* SF-UI-Display-Semibold.otf in Resources */,
+				B1F34ECC1BFA61D90044155D /* Assets.xcassets in Resources */,
 				B1A750C21BFA573E002E92AF /* Info.plist in Resources */,
 				B1A750BA1BFA573E002E92AF /* InvalidInputAlertView.xib in Resources */,
 			);
@@ -558,6 +557,7 @@
 				B1A7505B1BFA5308002E92AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1A7505C1BFA5308002E92AF /* Build configuration list for PBXNativeTarget "ZimcherTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +566,7 @@
 				B1A7505E1BFA5308002E92AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
